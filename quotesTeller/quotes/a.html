@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>JavaScript Assignment</title>
+		<style>
+			#hap {
+					position:absolute;	
+					top:150;
+					left:250;
+					width:20%;
+					height:40%;
+					border-style: solid;
+    					border-width: 3px;
+				}
+			#hap:hover {
+						border-color:blue;
+					}
+			#sa {
+					position:absolute;	
+					top:150;
+					left:550;
+					width:20%;
+					height:40%;
+					border-style: solid;
+    					border-width: 3px;
+				}
+			#sa:hover {
+						border-color:red;
+					}
+			#ang {
+					position:absolute;	
+					top:150;
+					left:850;
+					width:20%;
+					height:40%;
+					border-style: solid;
+    					border-width: 3px;
+				}
+			#ang:hover {
+						border-color:green;
+					}
+			div {
+				align-content:center;
+				}
+			#demo {
+					position:absolute;
+					top:500;
+					left:450;
+					font-size: 40px;
+					color:blue;
+					font-family:Apple Chancery, cursive;
+				}
+		</style>
+	</head>
+	<body>
+		<center>Name:
+		<input type="text" name="name" id="asd" oninput="myFunction()"><br><br>
+		Color:
+		<input type="text" name="fav" id="col" oninput="fun()">
+		</center>
+		<img id="hap" src="happy.jpeg" onclick="sdf()">
+		<img id="sa" src="sad.jpg" onclick="zxc()">		
+		<img id="ang" src="anger.jpg" onclick="bvc()">
+		<div><p id="demo"></p></div>
+		<script>
+			var x;
+			function max1() {
+					return Math.floor(Math.random() * (2 - 0 + 1) );
+				}
+			function myFunction() {
+    				 x = document.getElementById('asd').value;
+    				document.getElementById('demo').innerHTML = "Hello "+x;
+			}
+			function fun() {
+				var theInput = document.getElementById('col').value;
+				document.body.style.backgroundColor = theInput;
+			}
+			function sdf() {
+				var happ= ["Smile nice","Have a happy mind","Nice day"];
+				document.getElementById('demo').innerHTML="Hello "+ x+" " + happ[max1()];
+			}
+			function zxc() {
+				var saa=["People change","Sad and lone","Lone wolf forever"];
+				document.getElementById('demo').innerHTML="Hello "+ x+" " + saa[max1()];
+			}
+			function bvc() {
+				var ang=["Anger kills","Bore look","Anger now and ever"];
+				document.getElementById('demo').innerHTML="Hello "+ x+" " + ang[max1()];
+			}
+		</script>
+	</body>
+</html>
